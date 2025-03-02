@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CE Frame</title>
+    <script src="./script/aframe.js"></script>
+</head>
+<body>
+    <a-scene>
+        <!-- floor
+        <a-plane position="0 0 0" rotation="-90 0 0" width="100000" height="100000" src="ground1.jpeg"></a-plane> -->
+        <!-- Sky -->
+        <a-sky src = "sky1.jpg" position=""></a-sky>
+
+        <!-- Wooden Floor -->
+        <a-plane src="kitchen_wood.jpg" position="0 -0.5 0" rotation="-90 0 0" width="1000" height="1000" repeat="100 100"></a-plane>
+
+        <!-- Table -->
+        <a-box position="0 0.5 0" width="6" height="0.1" depth="6" color="" rotation="0 0 0" src="./pexels-fwstudio-129731.jpg">
+            <a-box width="0.1" height="1" depth="0.1" position="-2.5 -0.5 2.5" color="black"></a-box>
+            <a-box width="0.1" height="1" depth="0.1" position="2.5 -0.5 2.5" color="black"></a-box>
+            <a-box width="0.1" height="1" depth="0.1" position="2.5 -0.5 -2.5" color="black"></a-box>
+            <a-box width="0.1" height="1" depth="0.1" position="-2.5 -0.5 -2.5" color="black"></a-box>
+        </a-box>
+
+        <!-- Cylinders on Table -->
+        <a-cylinder height="0.6" radius="0.2" position="-1 0.5 1" src="./ideal.jpg" rotation="0 250 0"></a-cylinder>
+        <a-cylinder height="0.4" radius="0.1" position="1 0.5 1" src="./sugar.jpeg"></a-cylinder>
+        <a-cylinder height="0.6" radius="0.2" position="0 0.5 -1" src="./milo.jpg"></a-cylinder>
+
+        <!-- Coffee Mugs -->
+        <a-entity id="mug" position="-0.5 0.5 0.5">
+            <!-- Mug Body -->
+            <a-cylinder height="0.7" radius="0.15" color="#FFFFFF" open-ended="true" side="double"></a-cylinder>
+            <!-- Mug Handle -->
+            <a-torus radius="0.1" radius-tubular="0.01" position="0.2 0.25 0" rotation="0 0 90" color="#FFFFFF"></a-torus>
+        </a-entity>
+
+        <a-entity id="mug" position="0.5 0.5 0.5">
+            <!-- Mug Body -->
+            <a-cylinder height="0.7" radius="0.15" color="#FFFFFF" open-ended="true" side="double"></a-cylinder>
+            <!-- Mug Handle -->
+            <a-torus radius="0.1" radius-tubular="0.01" position="0.2 0.25 0" rotation="0 0 90" color="#FFFFFF"></a-torus>
+        </a-entity>
+
+        <!-- Chairs -->
+        <!-- First Chair -->
+        <a-box position="0 0 -4" height="0.1" rotation="0 180 0">
+            <a-box rotation="90 0 0" position="0 0.5 0.45" height="0.1" src="laminate-wood.jpg"></a-box>
+            <a-box color="black" position="-0.3 -0.3 -0.3" width="0.1" height="0.5" depth="0.1" src="laminate-wood.jpg"></a-box>
+            <a-box color="black" position="0.3 -0.3 0.3" width="0.1" height="0.5" depth="0.1" src="laminate-wood.jpg"></a-box>
+            <a-box color="black" position="-0.3 -0.3 0.3" width="0.1" height="0.5" depth="0.1"></a-box>
+            <a-box color="black" position="0.3 -0.3 -0.3" width="0.1" height="0.5" depth="0.1"></a-box>
+        </a-box>
+
+        <!-- Second Chair -->
+        <a-box position="4 0 1" height="0.1" rotation="0 90 0">
+            <a-box rotation="90 0 0" position="0 0.5 0.45" height="0.1" src="laminate-wood.jpg"></a-box>
+            <a-box color="black" position="-0.3 -0.3 -0.3" width="0.1" height="0.5" depth="0.1"></a-box>
+            <a-box color="black" position="0.3 -0.3 0.3" width="0.1" height="0.5" depth="0.1"></a-box>
+            <a-box color="black" position="-0.3 -0.3 0.3" width="0.1" height="0.5" depth="0.1"></a-box>
+            <a-box color="black" position="0.3 -0.3 -0.3" width="0.1" height="0.5" depth="0.1"></a-box>
+        </a-box>
+
+        <!-- Third Chair -->
+        <a-box position="-4 0 0" height="0.1" rotation="0 -90 0">
+            <a-box rotation="90 0 0" position="0 0.5 0.45" height="0.1" src="laminate-wood.jpg"></a-box>
+            <a-box color="black" position="-0.3 -0.3 -0.3" width="0.1" height="0.5" depth="0.1"></a-box>
+            <a-box color="black" position="0.3 -0.3 0.3" width="0.1" height="0.5" depth="0.1"></a-box>
+            <a-box color="black" position="-0.3 -0.3 0.3" width="0.1" height="0.5" depth="0.1"></a-box>
+            <a-box color="black" position="0.3 -0.3 -0.3" width="0.1" height="0.5" depth="0.1"></a-box>
+        </a-box>
+
+        <!-- Fourth Chair -->
+        <a-box position="0 0 5" height="0.1" rotation="0 0 0">
+            <a-box rotation="90 0 0" position="0 0.5 0.45" height="0.1" src="laminate-wood.jpg"></a-box>
+            <a-box color="black" position="-0.3 -0.3 -0.3" width="0.1" height="0.5" depth="0.1"></a-box>
+            <a-box color="black" position="0.3 -0.3 0.3" width="0.1" height="0.5" depth="0.1"></a-box>
+            <a-box color="black" position="-0.3 -0.3 0.3" width="0.1" height="0.5" depth="0.1"></a-box>
+            <a-box color="black" position="0.3 -0.3 -0.3" width="0.1" height="0.5" depth="0.1"></a-box>
+        </a-box>
+
+        <!-- Walls & Ceiling -->
+        <!-- Back Wall -->
+        <a-box width="15" height="6" depth="0.2" position="0 2 -7.5" color="#fae5d3"></a-box>
+        <!-- Left Wall -->
+        <a-box width="0.2" height="6" depth="15" position="-7.5 2 0" color="#fae5d3"></a-box>
+        <!-- Right Wall -->
+        <a-box width="0.2" height="6" depth="15" position="7.5 2 0" color="#fae5d3"></a-box>
+        <!-- Ceiling -->
+        <a-box width="15" height="0.2" depth="15" position="0 5 0" src="wal2.jpg"></a-box>
+
+        <!-- Picture Frames -->
+        <!-- Frame 1 on Back Wall -->
+        <a-entity position="0 2.5 -7.4">
+            <!-- Frame Border -->
+            <a-box width="2" height="2" depth="0.1" position="0 0 0" color="#8B4513"></a-box>
+            <!-- Picture -->
+            <a-box width="1.8" height="1.8" depth="0.05" position="0 0 0.05" src="./frame1.jpg"></a-box>
+        </a-entity>
+
+        <!-- Frame 2 on Left Wall -->
+        <a-entity position="-7.4 2.5 0" rotation="0 90 0">
+            <!-- Frame Border -->
+            <a-box width="2" height="2" depth="0.1" position="0 0 0" color="#8B4513"></a-box>
+            <!-- Picture -->
+            <a-box width="1.8" height="1.8" depth="0.05" position="0 0 0.05" src="./frame2.jpg"></a-box>
+        </a-entity>
+
+        <!-- Frame 3 on Right Wall -->
+        <a-entity position="7.4 2.5 0" rotation="0 -90 0">
+            <!-- Frame Border -->
+            <a-box width="2" height="2" depth="0.1" position="0 0 0" color="#8B4513"></a-box>
+            <!-- Picture -->
+            <a-box width="1.8" height="1.8" depth="0.05" position="0 0 0.05" src="./frame3.jpg"></a-box>
+        </a-entity>
+
+        <!-- Chandelier -->
+        <a-entity position="0 4.5 0">
+            <!-- Chandelier Chain -->
+            <a-cylinder height="0.5" radius="0.02" position="0 0.25 0" color="#FFFFFF"></a-cylinder>
+
+            <!-- Chandelier Base -->
+            <a-cylinder height="0.1" radius="0.5" position="0 -0.2 0" color="#FFFFFF"></a-cylinder>
+
+            <!-- Chandelier Lights -->
+            <a-sphere radius="0.1" position="0 -0.5 0" color="#FFFF00"></a-sphere>
+            <a-sphere radius="0.1" position="-0.3 -0.5 0.3" color="#FFFF00"></a-sphere>
+            <a-sphere radius="0.1" position="0.3 -0.5 0.3" color="#FFFF00"></a-sphere>
+            <a-sphere radius="0.1" position="-0.3 -0.5 -0.3" color="#FFFF00"></a-sphere>
+            <a-sphere radius="0.1" position="0.3 -0.5 -0.3" color="#FFFF00"></a-sphere>
+        </a-entity>
+        <a-camera position="0 1.6 5"></a-camera>
+    </a-scene>
+</body>
+</html>
